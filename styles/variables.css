@@ -1,8 +1,9 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --text-color: #000;
+  --accent-color: #000;
   --variable-font: 'Inter-Variable';
   --font: 'PressStart2P-Regular';
   --weight-base: 400;
   --weight-head: 700;
+  --background-color: white;
 }

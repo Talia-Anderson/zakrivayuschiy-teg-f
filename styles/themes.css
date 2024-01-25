@@ -4,3 +4,36 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+:root.theme-dark {
+  --accent-color: #00CC14;
+  --weight-base: 465;
+  --weight-head: 785;
+  --background-color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root.theme-dark {
+    --accent-color: #00CC14;
+    --weight-base: 465;
+    --weight-head: 785;
+    --background-color: black;
+  }
+  
+  }
+
+  :root.theme-light {
+    --accent-color: #000;
+    --weight-base: 400;
+    --weight-head: 700;
+    --background-color: white;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root.theme-light {
+      --accent-color: #000;
+      --weight-base: 400;
+      --weight-head: 700;
+      --background-color: white;
+    }
+    
+    }
