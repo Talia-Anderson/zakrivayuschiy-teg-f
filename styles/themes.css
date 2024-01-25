@@ -18,8 +18,7 @@
     --weight-head: 785;
     --background-color: black;
   }
-  
-  }
+}
 
   :root.theme-light {
     --accent-color: #000;
@@ -35,5 +34,4 @@
       --weight-head: 700;
       --background-color: white;
     }
-    
-    }
+  }
