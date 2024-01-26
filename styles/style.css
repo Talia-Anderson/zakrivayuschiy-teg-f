@@ -22,5 +22,9 @@
   font-family: var(--variable-font), sans-serif;
   font-variation-settings: var(--weight-base);
   color: var(--accent-color);
-  background-color: var(--background-color);
+  background-image: var(--background-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
