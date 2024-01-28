@@ -76,8 +76,13 @@
   text-transform: uppercase;
 }
 
-.theme-menu__item:disabled {
-  content: "▶";
+.theme-menu__button:disabled {
+  pointer-events: none;
+  opacity: 100%;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
   width: 14px;
   height: 13px;
   color: var(--accent-color);
@@ -120,6 +125,8 @@
 
 .card__tag-image {
   position: relative;
+  background-blend-mode: hard-light;
+  isolation: 
 }
 
 .card__corner-text {
@@ -127,13 +134,12 @@
   top: 25px;
   right: 25px;
   color: var(--accent-color);
-  /* -webkit-text-stroke: 1 var(--tag-color); */
   font-family: var(--font);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  mix-blend-mode: hard-light;
+  
 
   text-shadow:
     -1px 0 var(--tag-color), 
@@ -156,6 +162,7 @@
   width: 100%;
   height: 100%;
   padding-bottom: 25px;
+  
 }
 
 .buttons {
