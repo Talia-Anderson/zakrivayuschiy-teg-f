@@ -8,6 +8,7 @@
   --accent-color: #00CC14;
   --weight-base: 465;
   --weight-head: 785;
+  --card-background: black;
   --background-color: 
   repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px),
   repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px),
@@ -19,6 +20,7 @@
     --accent-color: #00CC14;
     --weight-base: 465;
     --weight-head: 785;
+    --card-background: black;
     --background-color: 
     repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px),
@@ -30,6 +32,7 @@
     --accent-color: #000;
     --weight-base: 400;
     --weight-head: 700;
+    --card-background: white;
     --background-color: 
   repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px),
   repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px),
@@ -41,6 +44,7 @@
       --accent-color: #000;
       --weight-base: 400;
       --weight-head: 700;
+      --card-background: white;
       --background-color: 
   repeating-linear-gradient(to right, #d3d3d3, transparent 4px),
   repeating-linear-gradient(to bottom, #d3d3d3, transparent 4px),

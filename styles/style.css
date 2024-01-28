@@ -28,3 +28,171 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
+/*header classes*/
+
+.header {
+  background-color: var(--card-background);
+  border: 2px solid var(--accent-color);
+  font-family: var(--font), sans-serif;
+  margin-bottom: 104px;
+  width: var(--card-size);
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  margin-top: 102px;
+}
+
+.header__inside {
+  height: 364px;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-self: center;
+}
+
+.header__text {
+  font-size: var(--header-font-size);
+  margin-bottom: 20px;
+  margin-top: var(--margin-header-top);
+}
+
+.header__subtext {
+  margin-bottom: 23px;
+  font-size: var(--header-subfont-size);
+}
+
+.theme-menu__list {
+  display: grid;
+  gap: 12px;
+  text-align: left;
+  padding-bottom: 25px;
+}
+
+.theme-menu__button {
+  background-color: transparent;
+  border: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.theme-menu__item:disabled {
+  content: "▶";
+  width: 14px;
+  height: 13px;
+  color: var(--accent-color);
+}
+
+/*main classes*/
+
+.main {
+  display: grid;
+  justify-content: center;
+  gap: 57px;
+}
+
+.card {
+  display: grid;
+  justify-self: center;
+  background-color: var(--card-background);
+  border: 2px solid var(--accent-color);
+  width: var(--card-size);
+}
+
+.card__header-settings {
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card__text-settings {
+  padding-left:25px;
+  padding-right:25px;
+  padding-bottom: 25px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.card__image {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 25px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-self: right;
+  gap: 12px;
+  margin-bottom: 25px;
+  margin-right: 25px;
+}
+
+.card__like-button {
+  height: 38px;
+  width: 130px;
+  border: 2px solid var(--accent-color);
+  background-color: transparent;
+}
+
+.card__icon-button {
+  border: 0;
+  background-color: transparent;
+}
+
+.button__text {
+  font-family: var(--font);
+  font-size: 14px;
+}
+
+.main__memory-card {
+  display: grid;
+  width: 335px;
+  grid-template-columns: repeat(2, auto);
+  border: 2px solid var(--accent-color);
+  background-color: var(--card-background);
+  height: 51px;
+  justify-self: center;
+  align-items: center;
+  margin-bottom: 105px;
+}
+
+.floppy {
+  scale: 0.5;
+
+}
+
+/*media classes*/
+
+@media (width <= 376px) {
+
+
+  .header {
+    width: 100%;
+  }
+
+  .header__inside {
+    height: 323px;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .main__memory-card {
+    grid-template-rows: repeat(2, auto);
+    height: 80px;
+    width: 306px
+  }
+}
