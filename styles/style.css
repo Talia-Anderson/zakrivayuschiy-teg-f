@@ -55,6 +55,11 @@
   font-size: var(--header-font-size);
   margin-bottom: 20px;
   margin-top: var(--margin-header-top);
+  text-decoration: none;
+}
+
+.header__text:focus {
+  outline: none;
 }
 
 .header__subtext {
@@ -79,7 +84,6 @@
 .theme-menu__button:disabled {
   pointer-events: none;
   opacity: 0.6;
-  animation: move 0.5s ease-in-out infinite alternate;
 }
 
 .theme-menu__button:disabled::before {
@@ -103,7 +107,6 @@
   background-color: var(--accent-color);
   width: 0%;
   transition: width 0.3s;
-  animation: move 0.5s ease-in-out infinite alternate;
 }
 .theme-menu__button:hover::after {
   width: 100%;
@@ -175,7 +178,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  background-blend-mode: hard-light;
+  mix-blend-mode: hard-light;
   opacity: 50%;
 
   text-shadow:
@@ -215,7 +218,35 @@
   height: 38px;
   width: 130px;
   border: 2px solid var(--accent-color);
-  background-color: transparent;
+  background-color: var(--card-background);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.card__like-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transform: translateX(-130%);
+  transition: transform 0.5s ease-in-out;
+}
+.card__like-button:hover::before {
+  transform: translateX(-28%);
+}
+
+.card__like-button:focus-visible {
+  outline: 0;
+  box-shadow: 2px 2px var(--accent-color);
+  transition: box-shadow 0.3s;
+}
+
+.card__like-button:focus {
+  outline: 0;
 }
 
 .card__icon-button {
@@ -223,9 +254,27 @@
   background-color: transparent;
 }
 
+.card__icon-button:focus {
+  outline: 0;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
+  transition: border 0.3s ease;
+}
+
 .button__text {
+  position: relative;
   font-family: var(--font);
   font-size: 14px;
+  z-index: 2;
+  color: var(--card-background);
+  mix-blend-mode: difference;
+}
+
+.button__text:hover {
+  color: var(--background-color);
+  transition: color 0.3s;
 }
 
 .main__memory-card {
@@ -238,11 +287,41 @@
   justify-self: center;
   align-items: center;
   margin-bottom: 105px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.main__memory-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.main__memory-card:hover::before {
+  transform: translateX(0);
+}
+
+.main__memory-card:focus-visible {
+  outline: 0;
+  box-shadow: 2px 2px var(--accent-color);
+  transition: box-shadow 0.3s;
+}
+
+.main__memory-card:focus {
+  outline: 0;
 }
 
 .floppy {
   scale: 0.5;
-
+  mix-blend-mode: difference;
+  color: var(--card-background)
 }
 
 /*media classes*/
