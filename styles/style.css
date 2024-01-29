@@ -78,7 +78,8 @@
 
 .theme-menu__button:disabled {
   pointer-events: none;
-  opacity: 100%;
+  opacity: 0.6;
+  animation: move 0.5s ease-in-out infinite alternate;
 }
 
 .theme-menu__button:disabled::before {
@@ -86,6 +87,42 @@
   width: 14px;
   height: 13px;
   color: var(--accent-color);
+  animation: move 0.5s ease-in-out infinite alternate;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  height: 2px;
+  margin-top: 2px;
+  background-color: var(--accent-color);
+  width: 0%;
+  transition: width 0.3s;
+  animation: move 0.5s ease-in-out infinite alternate;
+}
+.theme-menu__button:hover::after {
+  width: 100%;
+}
+
+.theme-menu__button:focus {
+  outline: 0;
+  opacity: 0.6;
+}
+
+@keyframes move {
+
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(4px);
+  }
+
 }
 
 /*main classes*/
@@ -125,8 +162,7 @@
 
 .card__tag-image {
   position: relative;
-  background-blend-mode: hard-light;
-  isolation: 
+  
 }
 
 .card__corner-text {
@@ -139,7 +175,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  
+  background-blend-mode: hard-light;
+  opacity: 50%;
 
   text-shadow:
     -1px 0 var(--tag-color), 
