@@ -10,6 +10,7 @@
   --weight-head: 785;
   --card-background: black;
   --tag-color: black;
+  --contur-color: #00CC14;
   --background-color: 
   repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px),
   repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px),
@@ -23,6 +24,7 @@
     --weight-head: 785;
     --card-background: black;
     --tag-color: black;
+    --contur-color: #00CC14;
     --background-color: 
     repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px),
@@ -36,6 +38,7 @@
     --weight-head: 700;
     --card-background: white;
     --tag-color: white;
+    --contur-color: black;
     --background-color: 
   repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px),
   repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px),
@@ -49,6 +52,7 @@
       --weight-head: 700;
       --card-background: white;
       --tag-color: white;
+      --contur-color: black;
       --background-color: 
   repeating-linear-gradient(to right, #d3d3d3, transparent 4px),
   repeating-linear-gradient(to bottom, #d3d3d3, transparent 4px),

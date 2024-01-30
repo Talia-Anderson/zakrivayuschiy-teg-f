@@ -351,3 +351,22 @@
     width: 306px
   }
 }
+
+/*heart classes*/
+
+.contur {
+  fill: var(--contur-color)
+}
+
+.main-body {
+  fill: none;
+}
+
+.core {
+  fill: none;
+}
+
+.sparks {
+  fill: var(--body-color);
+  opacity: 0;
+}
