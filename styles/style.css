@@ -252,6 +252,7 @@
 .card__icon-button {
   border: 0;
   background-color: transparent;
+  z-index: 1;
 }
 
 .card__icon-button:focus {
@@ -354,19 +355,103 @@
 
 /*heart classes*/
 
-.contur {
-  fill: var(--contur-color)
-}
-
-.main-body {
-  fill: none;
-}
-
-.core {
-  fill: none;
+.heart {
+  z-index: 2;
 }
 
 .sparks {
+  fill: none;
+}
+
+.heart:hover .core {
+    fill: var(--contur-color);
+    transition: fill 0.1s ease-in-out;
+}
+  
+.heart:hover  .main-body {
+    fill: var(--contur-color);
+    transition: fill 0.3s ease-in-out;
+    transition-delay: 0.05s;
+}
+
+/* .page:hover .heart .core {
+  fill: none;
+  transition: fill 0.3s;
+  transition-delay: 0.03s;
+}
+
+.page:hover .heart .main-body {
+  fill: none;
+  transition: fill 0.3s;
+} */
+
+.heart:active {
+
+  .core {
+    fill: var(--body-color);
+    transition: fill 0.4s;
+  }
+
+  .main-body {
+    fill: var(--body-color);
+    transition: fill 0.4s;
+    transition-delay: 0.05s;
+  }
+
+}
+
+.like-icon.is-liked .core {
   fill: var(--body-color);
-  opacity: 0;
+  transition: fill 0.4s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--body-color);
+  transition: fill 0.4s;
+  transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .contur {
+  fill: var(--body-color);
+  transition: fill 0.4s;
+  transition-delay: 0.06s;
+}
+
+@keyframes scale-heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart {
+  /* начальный размер сердца */
+  transform: scale(1);
+}
+
+.is-liked .heart {
+  /* запускаем анимацию через 0.1s после появления класса is-liked */
+  animation: scale-heart 0.3s ease-in 0.1s both;
+}
+
+@keyframes spark {
+  0% {
+    fill: none;
+  }
+  50% {
+    fill: var(--body-color);
+  }
+  100% {
+    fill: none;
+  }
+}
+
+.is-liked .sparks {
+  /* запускаем анимацию через 0.3s после появления класса is-liked */
+  animation: spark 0.5s ease-in-out 0.3s both;
 }
