@@ -158,7 +158,9 @@
 
 .card__tag-image {
   position: relative;
-
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  overflow: hidden;
 }
 
 .card__corner-text {
@@ -193,15 +195,13 @@
   border: 0;
   width: 100%;
   height: 100%;
-  border-top: 2px solid var(--accent-color);
-  border-bottom: 2px solid var(--accent-color);
+
 }
 
 .buttons {
   display: grid;
   grid-template-columns: auto auto;
   justify-self: right;
-  gap: 12px;
   margin-bottom: 25px;
   margin-right: 25px;
   margin-top: 25px;
@@ -215,6 +215,7 @@
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  color: var(--button-text-color);
   transition: all 0.5s;
 }
 
@@ -222,14 +223,16 @@
   content: '';
   position: absolute;
   top: 0;
+  left: -100%;
   width: 100%;
   height: 100%;
   background-color: var(--accent-color);
-  transform: translateX(-130%);
+  transform: translateX(0);
   transition: transform 0.5s ease-in-out;
 }
+
 .card__like-button:hover::before {
-  transform: translateX(-28%);
+  transform: translateX(100%);
 }
 
 .card__like-button:focus-visible {
@@ -262,12 +265,10 @@
   font-family: var(--font);
   font-size: 14px;
   z-index: 2;
-  color: var(--card-background);
   mix-blend-mode: difference;
 }
 
 .button__text:hover {
-  color: var(--background-color);
   transition: color 0.3s;
 }
 
@@ -285,6 +286,7 @@
   cursor: pointer;
   overflow: hidden;
   transition: all 0.5s;
+  color: var(--button-text-color);
 }
 
 .main__memory-card::before {
@@ -315,7 +317,6 @@
 .floppy {
   scale: 0.5;
   mix-blend-mode: difference;
-  color: var(--card-background);
 }
 
 /*dialog classes*/
@@ -342,8 +343,7 @@
 
 .floppy-dialog {
   scale: 1;
-  mix-blend-mode: difference;
-  color: var(--card-background)
+  color: var(--accent-color);
 }
 
 .dialog__main-text {
@@ -363,6 +363,13 @@
   grid-row: 2/3;
   grid-column: 1/3;
   height: 38px;
+}
+
+.dialog__button-text {
+  font-family: var(--font);
+  font-size: 14px;
+  z-index: 2;
+  color: var(--accent-color)
 }
 
 dialog::backdrop {
