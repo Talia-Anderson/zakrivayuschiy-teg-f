@@ -323,8 +323,8 @@
 
 .dialog {
   width: var(--dialog-card-width);
-  margin-left: var(--dialog-card-margin);
-  margin-right: var(--dialog-card-margin);
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--card-background);
   border: 2px solid var(--accent-color);
   justify-self: center;
