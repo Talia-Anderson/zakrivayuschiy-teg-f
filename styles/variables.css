@@ -2,6 +2,8 @@
 :root {
   --accent-color: #000;
   --card-background: white;
+  --dialog-card-width: clamp(341px,calc(357/1440 *100%),357px);
+  --dialog-card-margin: clamp(17px,calc(542/1440 *100%),542px);
   --card-size: clamp( 425px , calc(696/1440 * 100%) ,696px);
   --margin-header-top: clamp( 120px,calc(54/182 * 100%),136px);
   --variable-font: 'Inter-Variable';

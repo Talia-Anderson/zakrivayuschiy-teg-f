@@ -84,13 +84,29 @@
         </button>
         </div>
       </div>
-      <button type = button class = "main__memory-card">
+      <button type = button 
+              class = "main__memory-card"
+              onclick = "window['dialog-id'].showModal();"
+              aria-controls="dialog-id"
+              >
         <svg class = "floppy" viewBox = "0 0 40 40" width = "40" height = "40">
           <use href = "svg/floppy.svg#floppy" ></use>
         </svg>
         <span class  = "button__text">Сохранить на память</span>
       </button>
     </main>
+
+    <dialog id = "dialog-id" class = "dialog">
+      <form class = "dialog__form">
+        <svg class = "floppy-dialog" viewBox = "0 0 40 40" width = "40" height = "40">
+          <use href = "svg/floppy.svg#floppy" ></use>
+        </svg>
+        <span class = "dialog__main-text">Вставьте дискету, чтобы продолжить</span>
+        <button class = "dialog__button" type = "submit" onclick="window['dialog-id'].close()">
+          <span class = "button__text">OK</span>
+        </button>
+      </form>
+    </dialog>
 
     <script src="./scripts/like.js"></script>
   </body>
