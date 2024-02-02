@@ -2,8 +2,8 @@
 :root {
   --accent-color: #000;
   --card-background: white;
+  --reserved-background-color: #e7e7e7;
   --dialog-card-width: clamp(341px,calc(357/1440 *100%),357px);
-  --dialog-card-margin: clamp(84px,calc(542/1440 *100%),542px);
   --card-size: clamp( 425px , calc(696/1440 * 100%) ,696px);
   --margin-header-top: clamp( 120px,calc(54/182 * 100%),136px);
   --variable-font: 'Inter-Variable';
@@ -17,7 +17,7 @@
   --background-color: 
   repeating-linear-gradient(to right, #d3d3d3, transparent 4px),
   repeating-linear-gradient(to bottom, #d3d3d3, transparent 4px),
-  linear-gradient(#e7e7e7, #1a1a1a);
+  linear-gradient(to bottom, #e7e7e7, #1a1a1a);
   --header-font-size: clamp(3.0625rem, 2.7808rem + 1.4085vw, 4.0625rem);
   --header-subfont-size: clamp(0.875rem, 0.7143rem + 0.8036vw, 1.4375rem);
 }

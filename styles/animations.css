@@ -18,11 +18,8 @@
   0% {
     transform: translateX(0px);
   }
-  50% {
-    transform: translateX(4px);
-  }
   100% {
-    transform: translateX(0px);
+    transform: translateX(4px);
   }
 
 }
@@ -51,20 +48,18 @@
   }
 }
 
-.heart:active {
-
-  .core {
-    fill: var(--body-color);
-    transition: fill 0.4s;
-  }
-
-  .main-body {
-    fill: var(--body-color);
-    transition: fill 0.4s;
-    transition-delay: 0.05s;
-  }
-
+.heart:active .core{
+  fill: var(--body-color);
+  transition: fill 0.3s;
 }
+
+.heart:active .main-body {
+  fill: var(--body-color);
+  transition: fill 0.3s;
+  transition-delay: 0.05s;
+}
+
+
 
 /*heart classes*/
 
@@ -76,9 +71,18 @@
   fill: none;
 }
 
+.heart .core {
+  transition: fill 0.3s ease-in-out;
+  transition-delay: 0.05s;
+}
+
+.heart  .main-body {
+  transition: fill 0.3s ease-in-out;
+}
+
 .heart:hover .core {
     fill: var(--contur-color);
-    transition: fill 0.1s ease-in-out;
+    transition: fill 0.3s ease-in-out;
 }
   
 .heart:hover  .main-body {
@@ -87,32 +91,26 @@
     transition-delay: 0.05s;
 }
 
-/* .page:hover .heart .core {
-  fill: none;
-  transition: fill 0.3s;
-  transition-delay: 0.03s;
-}
-
-.page:hover .heart .main-body {
-  fill: none;
-  transition: fill 0.3s;
-} */
-
 .like-icon.is-liked .core {
   fill: var(--body-color);
-  transition: fill 0.4s;
+  transition: fill 0.3s;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--body-color);
-  transition: fill 0.4s;
+  transition: fill 0.3s;
   transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .contur {
   fill: var(--body-color);
-  transition: fill 0.4s;
+  transition: fill 0.3s;
   transition-delay: 0.06s;
+}
+
+.like-icon .contur {
+  fill: var(--contur-color);
+  transition: fill 0.1s;
 }
 
 .heart {
@@ -122,10 +120,12 @@
 
 .is-liked .heart {
   /* запускаем анимацию через 0.1s после появления класса is-liked */
-  animation: scale-heart 0.3s ease-in 0.1s both;
+  animation: scale-heart 0.3s ease-in 0.1s alternate;
+  animation-timing-function: linear;
 }
 
 .is-liked .sparks {
   /* запускаем анимацию через 0.3s после появления класса is-liked */
-  animation: spark 0.3s ease-in-out 0.3s both;
+  animation: spark 0.3s ease-in-out 0.3s alternate;
+  animation-timing-function: linear;
 }
