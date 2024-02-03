@@ -21,7 +21,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--variable-font), sans-serif;
-  font-variation-settings: var(--weight-base);
+  font-variation-settings: 'wght' var(--weight-base);
   color: var(--accent-color);
   background-image: var(--background-color);
   background-repeat: no-repeat;
@@ -119,9 +119,6 @@
   width: 0%;
   transition: width 0.3s;
 }
-.theme-menu__button:hover::after {
-  width: 100%;
-}
 
 .theme-menu__button:focus {
   outline: 0;
@@ -136,7 +133,6 @@
 
 .main {
   display: grid;
-  gap: 57px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -145,6 +141,7 @@
   display: grid;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 51px;
   background-color: var(--card-background);
   border: 2px solid var(--accent-color);
   width: var(--card-size);
@@ -155,7 +152,7 @@
   padding-top: 5px;
   font-size: 18px;
   font-style: normal;
-  font-variation-settings: var(--weight-head);
+  font-variation-settings: 'wght' var(--weight-head);
   line-height: normal;
   padding-bottom: 4px;
   padding-right: 10px;
@@ -167,7 +164,7 @@
   padding-top: 25px;
   font-size: 18px;
   font-style: normal;
-  font-variation-settings: var(--weight-base);
+  font-variation-settings: 'wght' var(--weight-base);
   line-height: 21px;
 }
 
@@ -221,7 +218,6 @@
   margin-bottom: 25px;
   margin-right: 25px;
   margin-top: 26px;
-  gap: 5px;
 }
 
 .card__like-button {
@@ -230,12 +226,16 @@
 }
 
 .card__icon-button {
+  display: grid;
+  align-content: center;
+  justify-content: center;
   border: 0;
   background-color: transparent;
   z-index: 1;
   cursor: pointer;
   max-height: 38px;
   padding-top: 2px;
+  transition: border 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -244,19 +244,7 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--accent-color);
-  transition: border 0.3s ease;
-}
 
-.button__text {
-  position: relative;
-  font-family: var(--font),sans-serif;
-  font-size: 14px;
-  z-index: 2;
-  mix-blend-mode: difference;
-}
-
-.button__text:hover {
-  transition: color 0.3s;
 }
 
 .main__memory-card {
@@ -264,17 +252,19 @@
   width: 335px;
   grid-template-columns: repeat(2, auto);
   height: 54px;
+  margin-left: auto;
+  margin-right: auto;
   justify-self: center;
   align-items: center;
   margin-bottom: 105px;
   padding-right: 15px;
   padding-left: 8px;
-  margin-top: -6px;
 }
 
 .floppy {
   scale: 0.5;
   mix-blend-mode: difference;
+  color: var(--button-text-color);
 }
 
 /*dialog classes*/
@@ -315,19 +305,11 @@
 }
 
 .dialog__button {
-  background-color: transparent;
-  border: 2px solid var(--accent-color);
   text-align: center;
   grid-row: 2/3;
   grid-column: 1/3;
   height: 38px;
-}
-
-.dialog__button-text {
-  font-family: var(--font),sans-serif;
-  font-size: 14px;
-  z-index: 2;
-  color: var(--accent-color)
+  color: var(--button-text-color);
 }
 
 dialog::backdrop {
@@ -416,7 +398,6 @@ dialog::backdrop {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  color: var(--button-text-color);
   transition: all 0.5s;
   transition: box-shadow 0.3s;
 }
@@ -444,4 +425,14 @@ dialog::backdrop {
 
 .button-swap:focus {
   outline: 0;
+}
+
+.button__text {
+  position: relative;
+  font-family: var(--font),sans-serif;
+  font-size: 14px;
+  z-index: 2;
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
+  transition: color 0.3s;
 }

@@ -50,12 +50,12 @@
 
 .heart:active .core{
   fill: var(--body-color);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .heart:active .main-body {
   fill: var(--body-color);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
   transition-delay: 0.05s;
 }
 
@@ -71,7 +71,7 @@
 
 .heart .core {
   transition: fill 0.3s ease-in-out;
-  transition-delay: 0.05s;
+  transition-delay: 0.03s;
 }
 
 .heart  .main-body {
@@ -91,24 +91,24 @@
 
 .like-icon.is-liked .core {
   fill: var(--body-color);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--body-color);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
   transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .contur {
   fill: var(--body-color);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
   transition-delay: 0.06s;
 }
 
 .like-icon .contur {
   fill: var(--contur-color);
-  transition: fill 0.1s;
+  transition: fill 0.1s linear;
 }
 
 .heart {
@@ -119,11 +119,9 @@
 .is-liked .heart {
   /* запускаем анимацию через 0.1s после появления класса is-liked */
   animation: scale-heart 0.3s ease-in 0.1s alternate;
-  animation-timing-function: linear;
 }
 
 .is-liked .sparks {
   /* запускаем анимацию через 0.3s после появления класса is-liked */
   animation: spark 0.3s ease-in-out 0.3s alternate;
-  animation-timing-function: linear;
 }
